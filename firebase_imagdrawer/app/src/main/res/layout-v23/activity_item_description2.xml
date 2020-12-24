@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layouts.ItemDescription">
+
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#272727">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                android:background="#272727"
+                android:backgroundTint="#272727">
+
+                <ImageView
+                    android:id="@+id/MovieImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/gradient_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow"/>
+
+                <TextView
+                    android:id="@+id/movietitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/lato_boldd"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="45sp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/lato_italic"
+                android:textColor="@color/lightGrey" />
+
+            <TextView
+                android:id="@+id/time_or_seasons"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/genre"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/timebg"
+                android:fontFamily="@font/lato_boldd"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/imdb_rating"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/genre"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/time_or_seasons"
+                android:background="@drawable/ratingsbg"
+                android:fontFamily="@font/lato_boldd"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/genre"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/imdb_rating"
+                android:src="@drawable/ic_baseline_fav_on" />
+
+            <TextView
+                android:id="@+id/likepercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genre"
+                android:layout_marginLeft="4dp"
+                android:text="98%"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/fav"
+                android:fontFamily="@font/lato_italic"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/storyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Story Line"
+                android:layout_below="@+id/time_or_seasons"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/berlin_italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                />
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="0dp"
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/storyline"
+                android:layout_height="wrap_content"
+                android:background="#272727"
+                android:backgroundTint="#272727"
+                >
+                <com.ms.square.android.expandabletextview.ExpandableTextView
+                    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/expand_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    expandableTextView:collapseDrawable="@drawable/ic_baseline_keyboard_arrow_up_24"
+                    expandableTextView:expandDrawable="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    expandableTextView:maxCollapsedLines="4"
+                    expandableTextView:animDuration="1000">
+                    <TextView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:textColor="#888888"
+                        android:textSize="13sp" />
+
+                    <ImageButton
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:background="@android:color/transparent" />
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shadow"
+                    android:id="@+id/shadow2"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/watch_trailer_Btn"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_add_for_watchlist"
+                android:fontFamily="@font/lato_black"
+                android:text="Watch Trailer"
+                android:textColor="@color/colorWhite" />
+
+
+
+            <TextView
+                android:id="@+id/availableon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/watch_trailer_Btn"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/berlin_italic"
+                android:text="Available On"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:layout_below="@+id/availableon"
+                android:id="@+id/availableonimage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availableon"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_boldd"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/casttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availableonimage"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/berlin_italic"
+                android:text="Cast"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/casttitle"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_bolditalic"
+                android:textColor="@color/lightGrey"
+                android:textSize="15dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/cast"
+                />
+            <WebView
+                android:visibility="gone"
+                android:clickable="false"
+                android:id="@+id/webView"
+                android:layout_below="@id/cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-15dp"
+        android:layout_marginRight="-10dp">
+        <com.like.LikeButton
+            app:icon_type="heart"
+            app:icon_size="35dp"
+            android:id="@+id/favbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:like_drawable="@drawable/ic_baseline_fav_on"
+            app:unlike_drawable="@drawable/ic_baseline_favorite_border_24"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backgroundforback"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_back" />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

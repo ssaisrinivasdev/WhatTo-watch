@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "175869591858",
+    "firebase_url": "https://fir-579f0.firebaseio.com",
+    "project_id": "fir-579f0",
+    "storage_bucket": "fir-579f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175869591858:android:be38c92872b0e86f4a172b",
+        "android_client_info": {
+          "package_name": "com.appplication.firebase_imagdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175869591858-uhvros6jmpshd3is11ujfl02h9bbdheg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtgW5iU9g8PMj3UMcB25-7G12xYdz_MTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175869591858-uhvros6jmpshd3is11ujfl02h9bbdheg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

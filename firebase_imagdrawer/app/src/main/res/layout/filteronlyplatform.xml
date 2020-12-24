@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+
+    android:backgroundTint="#2E2E2E"
+    android:background="#2E2E2E">
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By:"
+        android:textSize="26sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/open_sans_bold"
+        />
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Streaming Platform:"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="5dp"
+        />
+    <Spinner
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/streamspinner"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorWhite"
+        android:popupBackground="@color/colorWhite"
+        android:spinnerMode="dropdown"
+        />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textSize="18sp"
+        android:textColor="#2E2E2E"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>

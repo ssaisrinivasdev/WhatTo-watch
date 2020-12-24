@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout"
+    android:background="@color/colorTransperancy">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:id="@+id/sp2"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="110dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/sp2"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            app:cardBackgroundColor="@color/text_shadow"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp"
+            android:elevation="30dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="115dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal" />
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/sp4"
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cardView"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/lato_black"
+            android:text="Title"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp" />
+
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_marginTop="5dp"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/genre"
+            android:layout_toRightOf="@id/cardView"
+            android:src="@drawable/ic_baseline_fav_on"/>
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/genre"
+            android:layout_alignTop="@+id/like"
+            android:layout_toRightOf="@id/like"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_toRightOf="@id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textView"
+            android:fontFamily="@font/lato_italic"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:paddingLeft="0dp"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:textColor="@color/lightGrey"
+            android:id="@+id/description"
+            android:layout_below="@+id/like"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/cardView"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/cardView" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

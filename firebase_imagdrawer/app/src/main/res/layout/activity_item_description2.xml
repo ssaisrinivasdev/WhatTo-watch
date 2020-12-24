@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layouts.ItemDescription"
+    >
+    <ScrollView
+        android:background="@color/text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/MovieImage"
+                    android:layout_height="400dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/shadow"
+                    android:layout_height="400dp"
+                    android:background="@drawable/shadow"
+                    />
+
+                <ImageView
+                    android:id="@+id/favbtn"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="40dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_baseline_fav_off"
+                    android:layout_marginRight="20dp" />
+                <ImageView
+                    android:id="@+id/backbtn"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_back"
+                    android:layout_marginLeft="15dp" />
+                <TextView
+                    android:id="@+id/movietitle"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="20dp"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/lato_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_italic"
+                android:id="@+id/genre"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/cardView"
+                android:layout_marginLeft="40dp" />
+            <TextView
+                android:id="@+id/time_or_seasons"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/lato_black"
+                android:layout_marginTop="10dp"
+                android:textSize="10sp"
+                android:textColor="@color/text_shadow"
+                android:background="@drawable/timebg"
+                android:layout_below="@+id/genre"
+                />
+
+            <TextView
+                android:id="@+id/imdb_rating"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/time_or_seasons"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_black"
+                android:textSize="10sp"
+                android:textColor="@color/text_shadow"
+                android:background="@drawable/ratingsbg"
+                android:layout_below="@+id/genre"
+                />
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/genre"
+                android:layout_toRightOf="@+id/imdb_rating"
+                android:src="@drawable/ic_baseline_fav_on"
+                />
+            <TextView
+                android:id="@+id/likepercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genre"
+                android:layout_toRightOf="@+id/fav"
+                android:fontFamily="@font/lato_italic"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                />
+
+
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kizie Basu is fighting thyroid cancer when she meets Immanuel Rajkumar Junior or Manny, who has previously suffered from osteosarcoma and is in remission. Manny and his friend JP, who is suffering from glaucoma, are making a movie together, inspired by Rajinikanth's films. Manny invites Kizie to be the female lead. The two bond over his love for Rajnikanth's movies and her love for music, specifically an incomplete song by Abhimanyu Veer. Kizie and Manny gradually fall in love as they shoot scenes for JP's film. After an operation, JP loses sight in his second eye, making him go blind.One day, Manny informs Kizie that he has managed to track down Abhimanyu Veer and get in touch with him. Kizie e-mails Veer, who replies that she can visit him in Paris to get her questions answered. Kizie and Manny convince Kizie's parents to allow them to take the trip, with the condition that Kizie's mother would join them. As they are making arrangements for the trip, Kizie's cancer gets worse and she is hospitalized."
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/time_or_seasons"
+                android:textSize="17dp"
+                android:fontFamily="@font/lato_regular"
+                />
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/watch_trailer_Btn"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:text="Watch Trailer"
+                android:fontFamily="@font/lato_black"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_add_for_watchlist"
+                android:layout_below="@+id/description"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/availableon"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:text="Available On"
+                android:layout_gravity="bottom"
+                android:layout_below="@+id/watch_trailer_Btn"
+                android:layout_marginRight="20dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/lato_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" />
+
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/available"
+                android:text="Netflix, Hotstar, Prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/availableon"
+                android:textSize="17dp"
+                android:fontFamily="@font/lato_black"
+                />
+            <TextView
+                android:id="@+id/casttitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:text="Cast"
+                android:layout_gravity="bottom"
+                android:layout_below="@+id/available"
+                android:layout_marginRight="20dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/lato_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/casttitle"
+                android:textSize="17dp"
+                android:fontFamily="@font/lato_bolditalic"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

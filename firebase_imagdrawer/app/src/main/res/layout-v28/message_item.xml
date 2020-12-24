@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="125dp"
+
+    android:layout_height="wrap_content"
+    android:background="@color/colorTransperancy">
+
+
+    <RelativeLayout
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+                <Space
+                    android:id="@+id/sp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/cardView"
+            android:layout_alignRight="@+id/cardView"
+            android:layout_alignBottom="@+id/cardView"
+            android:outlineSpotShadowColor="@color/colorWhite"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="6dp">
+
+            <ImageView
+                android:id="@+id/app"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="110dp"
+                    android:layout_height="160dp"
+                    android:layout_below="@+id/sp2"
+                    android:outlineSpotShadowColor="#000000"
+                    app:cardBackgroundColor="#373737"
+
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="115dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="TODO" />
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:id="@+id/sp4"
+                    android:layout_width="100dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/cardView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp4"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_black"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:id="@+id/sp5"
+                    android:layout_width="100dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/textView" />
+
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/sp5"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_baseline_fav_on"
+                    />
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_above="@+id/sp6"
+                    android:layout_alignTop="@+id/like"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/like"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+
+
+
+
+        <Space
+                    android:id="@+id/sp6"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/like" />
+
+                <TextView
+                    android:id="@+id/genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp6"
+                    android:fontFamily="@font/lato_italic"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="9sp" />
+
+        <Space
+            android:id="@+id/sp7"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_below="@+id/genre"
+            android:layout_marginTop="-1dp" />
+
+        <TextView
+                    android:id="@+id/texxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text=" "
+                    android:layout_below="@id/sp7"
+
+                    />
+
+            </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
